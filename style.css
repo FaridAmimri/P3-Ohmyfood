@@ -1,17 +1,44 @@
 @charset "UTF-8";
+/* Tablet */
+@media (min-width: 768px) and (max-width: 1024px) {
+  form button {
+    width: 80%;
+    margin: auto;
+    margin-bottom: 25px;
+  }
+  main article {
+    width: 90%;
+    margin: auto;
+  }
+  .overlay {
+    padding: 2%;
+  }
+}
+
+/* Desktop */
+@media (max-width: 2560px) {
+  body {
+    width: 1000px;
+    margin: auto;
+  }
+}
+
+/* mixins générales des polices */
+/* mixins du Header */
+/* mixins des styles de boutons */
+/* mixins des titres */
+/* mixins générales */
+/* mixins du Footer */
 /* éléments généraux de la page */
 body {
   width: auto;
-  font-family: 'Roboto';
   margin: 0;
+  font-family: 'Roboto';
 }
 
 /* Header */
 header {
   text-align: center;
-}
-
-#logo {
   padding: 15px 0;
 }
 
@@ -34,13 +61,13 @@ input {
 #restaurants {
   background: #F3F4F4;
   padding: 30px;
-  font-family: 'Shrikhand', cursive;
+  font-family: 'Shrikhand';
 }
 
 header h2 {
   width: 80%;
   margin: auto;
-  font-family: 'Shrikhand', cursive;
+  font-family: 'Shrikhand';
 }
 
 header p {
@@ -58,6 +85,10 @@ header button {
   font-size: 1em;
   -webkit-box-shadow: 3px 6px 9px 0px rgba(0, 0, 0, 0.13);
   box-shadow: 3px 6px 9px 0px rgba(0, 0, 0, 0.13);
+}
+
+#btnpink {
+  background: #F6EFF6;
 }
 
 /* Form */
@@ -78,7 +109,7 @@ form {
 form button {
   background: #F3F4F4;
   border-radius: 20px;
-  padding: 9% 15% 8% 6%;
+  padding: 4%;
   margin-bottom: 20px;
   border-style: none;
   -webkit-box-align: baseline;
@@ -149,6 +180,8 @@ main article img {
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin: 0;
+  font-size: 1.3em;
+  font-family: 'Shrikhand';
 }
 
 .overlay p {

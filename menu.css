@@ -1,0 +1,145 @@
+@charset "UTF-8";
+/* mixins générales des polices */
+/* mixins du Header */
+/* mixins des styles de boutons */
+/* mixins des titres */
+/* mixins générales */
+/* mixins du Footer */
+/* éléments généraux de la page */
+body {
+  width: 100%;
+  margin: 0;
+  font-family: 'Roboto';
+}
+
+/* Header */
+header {
+  text-align: center;
+  padding: 15px 0;
+}
+
+header a {
+  position: absolute;
+  top: 4%;
+  left: 6%;
+}
+
+/* Main */
+main {
+  width: auto;
+  height: 1400px;
+}
+
+main img {
+  width: 100%;
+  height: 250px;
+}
+
+#card {
+  position: absolute;
+  width: 100%;
+  height: 1200px;
+  top: 270px;
+  background: #F3F4F4;
+  border-radius: 30px 30px 0 0;
+}
+
+.menu {
+  margin-bottom: 35px;
+}
+
+main h2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: auto;
+  width: 93%;
+  padding: 25px 0;
+}
+
+main h3 {
+  text-transform: uppercase;
+  margin-left: 4%;
+  color: grey;
+  width: 12%;
+  font-size: 1.1rem;
+  border-bottom: 3px solid #99E2D0;
+  margin-bottom: 15px;
+  padding-bottom: 5px;
+}
+
+main h4 {
+  margin: 0;
+  padding-bottom: 5px;
+  font-size: 1.2rem;
+}
+
+.food {
+  background: white;
+  margin: auto;
+  border-radius: 15px;
+  width: 88%;
+  padding: 10px 15px;
+  margin-bottom: 20px;
+}
+
+p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0;
+}
+
+#order {
+  text-align: center;
+}
+
+button {
+  width: 45%;
+  margin: 20px;
+  border-radius: 30px;
+  padding: 15px;
+  border-style: none;
+  background: #C76FDB;
+  color: white;
+  font-size: 1em;
+  -webkit-box-shadow: 3px 6px 9px 0px rgba(0, 0, 0, 0.13);
+  box-shadow: 3px 6px 9px 0px rgba(0, 0, 0, 0.13);
+}
+
+/* Footer */
+footer {
+  background: #4C4B4D;
+  color: white;
+  height: 200px;
+  width: auto;
+  padding-left: 7%;
+  font-size: 1.2em;
+}
+
+footer h4 {
+  margin: 0;
+  font-style: italic;
+  font-family: roboto;
+  padding: 19px 0;
+  font-weight: bold;
+}
+
+footer a {
+  padding-left: 2px;
+}
+
+.help {
+  margin-bottom: 5px;
+}
+
+#contact {
+  line-height: 28px;
+}
+/*# sourceMappingURL=menu.css.map */

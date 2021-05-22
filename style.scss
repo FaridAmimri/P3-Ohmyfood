@@ -1,22 +1,20 @@
-/* éléments généraux de la page */
-
+@import "./scss/media";
 @import "./scss/variable";
 @import "./scss/mixins";
 
 
+/* éléments généraux de la page */
+
 body {
     width: auto;
-    font-family: 'Roboto';
     margin: 0;
+    @include policetext
 }
 
 /* Header */
 
 header {
-    text-align: center;
-}
-#logo {
-    padding: 15px 0;
+    @include header
 }
 #localisation {
     font-size: 1em;
@@ -35,19 +33,23 @@ input {
 #restaurants {
     background: $backgroundprimary;
     padding: 30px;
-    @include police
+    @include policetitle
 }
 header h2 {
     width: 80%;
     margin: auto;
-    @include police;
+    @include policetitle;
 }
 header p {
     font-size: 1.1em;
     margin: 10px 0;
 }
 header button {
-    @include button;
+    @include explore;
+}
+
+#btnpink {
+    background: $backgroundbtn;
 }
 
 /* Form */
@@ -62,7 +64,7 @@ form {
 form button {
     background: $backgroundprimary;
     border-radius: 20px;
-    padding: 9% 15% 8% 6%;
+    padding: 4%;
     margin-bottom: 20px;
     border-style: none;
     align-items: baseline;
@@ -116,6 +118,8 @@ main article img {
     display: flex;
     justify-content: space-between;
     margin: 0;
+    font-size: 1.3em;
+    @include policetitle
 }
 .overlay p {
     margin: 0;
@@ -128,31 +132,22 @@ main article img {
 /* Footer */
 
 footer {
-    background:$backgroundfooter;
-    color: white;
-    height: 200px;
-    width: auto;
-    padding-left: 7%;
-    font-size: 1.2em;
+    @include footer
 }
   
-  footer h4 {
-    margin: 0;
-    font-style: italic;
-    font-family: roboto;
-    padding: 19px 0;
-    font-weight: bold;
+footer h4 {
+    @include footerh4
 }
   
-  footer a {
-    padding-left : 2px;
+footer a {
+    @include footera
 }
   
-  .help {
-    margin-bottom: 5px;
+.help {
+    @include footerhelp
 }
   
-  #contact {
-    line-height: 28px;
+#contact {
+    @include footercontact
 }
   
