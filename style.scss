@@ -10,44 +10,55 @@ body {
     margin: 0;
     @include policetext
 }
+h2 {
+    width: 80%;
+    @include policetitle;
+}
 
 /* Header */
 
 header {
-    @include header
+    @include header;
+
+    h1 {
+        width: 80%;
+        margin: auto;
+        font-family: 'Shrikhand', sans-serif;
+        font-size: 1.5rem;
+    }
+
+    p {
+        font-size: 1.1em;
+        margin: 10px 0;
+    }
+
+    button {
+        @include explore;
+    }
+}
+#logo {
+    @include logo
 }
 #localisation {
     font-size: 1em;
     background: $backgroundsecondary;
     padding: 10px 40px;
-}
-input {
-    background: transparent;
-    border-style: none;
-    font-size: 1.1em;
-    font-weight: bold;
-    padding-left: 10px;
-    text-align: center;
-    width: 50%;
+
+    input {
+        background: transparent;
+        border-style: none;
+        font-size: 1.1em;
+        font-weight: bold;
+        padding-left: 10px;
+        text-align: center;
+        width: 50%;
+    }
 }
 #restaurants {
     background: $backgroundprimary;
     padding: 30px;
     @include policetitle
 }
-header h2 {
-    width: 80%;
-    margin: auto;
-    @include policetitle;
-}
-header p {
-    font-size: 1.1em;
-    margin: 10px 0;
-}
-header button {
-    @include explore;
-}
-
 #btnpink {
     background: $backgroundbtn;
 }
@@ -56,24 +67,37 @@ header button {
 
 form {
     width: 85%;
+    height: 300px;
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
     margin: auto;
+    padding: 15px 0 75px 0;
+
+    button {
+        background: $backgroundprimary;
+        border-radius: 20px;
+        padding: 35px;
+        margin-bottom: 20px;
+        border-style: none;
+        align-items: baseline;
+        display: flex;
+        justify-content: space-around;
+        font-size: 1em;
+        position: relative;
+        @include shadow
+    }
+    i {
+        position: absolute;
+        left: 40px;
+        top: 27px;
+    }
+    b {
+        position: absolute;
+        left: 85px;
+        top: 27px;
+    }
 }
-form button {
-    background: $backgroundprimary;
-    border-radius: 20px;
-    padding: 4%;
-    margin-bottom: 20px;
-    border-style: none;
-    align-items: baseline;
-    display: flex;
-    justify-content: space-around;
-    font-size: 1em;
-    @include shadow
-}
-.cercle { 
+.circle { 
     height: 20px;
     width: 20px;
     color: white; 
@@ -81,49 +105,67 @@ form button {
     border: 1px solid $primarycolor;
     border-radius: 50%;
     position: absolute;
-    left: 7%;
+    left: -10px;
+    top: 27px;
+}
+i.fas.fa-store {
+    color: #9356DC;
 }
 
 /* Main */
 
 main {
     width: auto;
+    height: 1215px;
     background: $backgroundprimary;
     padding: 20px;
+
+    article {
+        object-fit: cover;
+        position: relative;
+        margin-bottom: 20px;
+        width: 100%;
+        height: 260px;
+    }
+
+    article img {
+        object-fit: cover;
+        width: 100%;
+        height: 70%;
+        border-radius: 15px 15px 0 0;
+    }
+
+    article span {
+        @include new
+    }
 }
-main article {
-    object-fit: cover;
-    position: relative;
-    margin-bottom: 20px;
+.image {
+    height: 100%;
     width: 100%;
-    height: 260px;
-}
-main article img {
-    object-fit: cover;
-    width: 100%;
-    height: 70%;
-    border-radius: 15px 15px 0 0;
 }
 .overlay {
     position: absolute;
     box-sizing: border-box;
     background: rgba(255,255,255,1);
+    color: black;
     border-radius: 0 0 15px 15px;
     height: 30%;
     width: 100%;
     bottom: 0;
-    padding: 4%;
-}
-.overlay h3 {
-    display: flex;
-    justify-content: space-between;
-    margin: 0;
-    font-size: 1.3em;
-    @include policetitle
-}
-.overlay p {
-    margin: 0;
-    font-size: 1.2em;
+    padding: 13px;
+
+    h3 {
+        display: flex;
+        justify-content: space-between;
+        margin: 0;
+        font-size: 1.3em;
+        @include policetitle
+    }
+    p {
+        margin: 0;
+        font-size: 1.2em;
+        font-weight: bold;
+    }
 }
 .fa-heart {
     font-size: 1.3em;
@@ -132,22 +174,60 @@ main article img {
 /* Footer */
 
 footer {
-    @include footer
-}
-  
-footer h4 {
-    @include footerh4
-}
-  
-footer a {
-    @include footera
-}
-  
+    @include footer;
+
+    h4 {
+        @include footerh4
+    }
+
+    i {
+        margin-right: 7px;
+        font-size: small;
+    }
+
+    a {
+        @include footera
+    }
+} 
 .help {
     @include footerhelp
 }
-  
 #contact {
     @include footercontact
 }
+
+/* Responsive for Tablet */
   
+@media #{$large-up} {
+    body {
+        width: 900px;
+        margin: auto;
+    }
+}
+
+/* Responsive for Desktop */
+  
+@media #{$large-up} {
+    body {
+        width: 900px;
+        margin: auto;
+    }
+}
+
+@media #{$medium-up} {
+    main {
+        display: flex;
+        flex-wrap: wrap;
+        height: auto;
+        justify-content: space-between;
+
+        article {
+            width: 49%;
+        }
+
+        article span {
+            left: 74%;
+        }
+    }
+}
+

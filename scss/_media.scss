@@ -1,29 +1,13 @@
 /* Tablet */
 
-@media (min-width: 768px) and (max-width: 1024px) {
+$medium : 768px!default;
 
-    form button {
-        width: 80%;
-        margin: auto;
-        margin-bottom: 25px;
-    }
-
-    main article {
-        width: 90%;
-        margin: auto;
-    }
-
-    .overlay {
-        padding: 2%;
-    }
-}
+$medium-up: "only screen and (min-width: #{$medium})";
+$medium-down: "only screen and (min-width: #{$medium})";
 
 /* Desktop */
 
-@media (max-width: 2560px) {
+$large : 1000px!default;
 
-    body {
-        width: 1000px;
-        margin: auto;
-    }
-}
+$large-up: "only screen and (min-width: #{$large})";
+$large-down: "only screen and (min-width: #{$large})";

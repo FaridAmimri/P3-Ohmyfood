@@ -1,31 +1,9 @@
 @charset "UTF-8";
 /* Tablet */
-@media (min-width: 768px) and (max-width: 1024px) {
-  form button {
-    width: 80%;
-    margin: auto;
-    margin-bottom: 25px;
-  }
-  main article {
-    width: 90%;
-    margin: auto;
-  }
-  .overlay {
-    padding: 2%;
-  }
-}
-
 /* Desktop */
-@media (max-width: 2560px) {
-  body {
-    width: 1000px;
-    margin: auto;
-  }
-}
-
 /* mixins générales des polices */
 /* mixins du Header */
-/* mixins des styles de boutons */
+/* mixins des styles */
 /* mixins des titres */
 /* mixins générales */
 /* mixins du Footer */
@@ -36,38 +14,22 @@ body {
   font-family: 'Roboto';
 }
 
+h2 {
+  width: 80%;
+  font-family: 'Shrikhand', sans-serif;
+}
+
 /* Header */
 header {
   text-align: center;
   padding: 15px 0;
 }
 
-#localisation {
-  font-size: 1em;
-  background: #E8E7E8;
-  padding: 10px 40px;
-}
-
-input {
-  background: transparent;
-  border-style: none;
-  font-size: 1.1em;
-  font-weight: bold;
-  padding-left: 10px;
-  text-align: center;
-  width: 50%;
-}
-
-#restaurants {
-  background: #F3F4F4;
-  padding: 30px;
-  font-family: 'Shrikhand';
-}
-
-header h2 {
+header h1 {
   width: 80%;
   margin: auto;
-  font-family: 'Shrikhand';
+  font-family: 'Shrikhand', sans-serif;
+  font-size: 1.5rem;
 }
 
 header p {
@@ -80,11 +42,37 @@ header button {
   border-radius: 30px;
   padding: 15px;
   border-style: none;
-  background: #FF79DA;
+  background: #D776EE;
   color: white;
   font-size: 1em;
   -webkit-box-shadow: 3px 6px 9px 0px rgba(0, 0, 0, 0.13);
   box-shadow: 3px 6px 9px 0px rgba(0, 0, 0, 0.13);
+}
+
+#logo {
+  padding: 15px 0;
+}
+
+#localisation {
+  font-size: 1em;
+  background: #E8E7E8;
+  padding: 10px 40px;
+}
+
+#localisation input {
+  background: transparent;
+  border-style: none;
+  font-size: 1.1em;
+  font-weight: bold;
+  padding-left: 10px;
+  text-align: center;
+  width: 50%;
+}
+
+#restaurants {
+  background: #F3F4F4;
+  padding: 30px;
+  font-family: 'Shrikhand', sans-serif;
 }
 
 #btnpink {
@@ -94,6 +82,7 @@ header button {
 /* Form */
 form {
   width: 85%;
+  height: 300px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -101,15 +90,14 @@ form {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   margin: auto;
+  padding: 15px 0 75px 0;
 }
 
 form button {
   background: #F3F4F4;
   border-radius: 20px;
-  padding: 4%;
+  padding: 35px;
   margin-bottom: 20px;
   border-style: none;
   -webkit-box-align: baseline;
@@ -121,11 +109,24 @@ form button {
   -ms-flex-pack: distribute;
       justify-content: space-around;
   font-size: 1em;
+  position: relative;
   -webkit-box-shadow: 3px 6px 9px 0px rgba(0, 0, 0, 0.13);
   box-shadow: 3px 6px 9px 0px rgba(0, 0, 0, 0.13);
 }
 
-.cercle {
+form i {
+  position: absolute;
+  left: 40px;
+  top: 27px;
+}
+
+form b {
+  position: absolute;
+  left: 85px;
+  top: 27px;
+}
+
+.circle {
   height: 20px;
   width: 20px;
   color: white;
@@ -133,12 +134,18 @@ form button {
   border: 1px solid #9356DC;
   border-radius: 50%;
   position: absolute;
-  left: 7%;
+  left: -10px;
+  top: 27px;
+}
+
+i.fas.fa-store {
+  color: #9356DC;
 }
 
 /* Main */
 main {
   width: auto;
+  height: 1215px;
   background: #F3F4F4;
   padding: 20px;
 }
@@ -160,16 +167,33 @@ main article img {
   border-radius: 15px 15px 0 0;
 }
 
+main article span {
+  position: absolute;
+  background-color: #89E9C5;
+  color: #0E8055;
+  font-weight: bold;
+  left: 70%;
+  top: 5%;
+  padding: 5px 12px;
+  border-radius: 3px;
+}
+
+.image {
+  height: 100%;
+  width: 100%;
+}
+
 .overlay {
   position: absolute;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   background: white;
+  color: black;
   border-radius: 0 0 15px 15px;
   height: 30%;
   width: 100%;
   bottom: 0;
-  padding: 4%;
+  padding: 13px;
 }
 
 .overlay h3 {
@@ -181,12 +205,13 @@ main article img {
           justify-content: space-between;
   margin: 0;
   font-size: 1.3em;
-  font-family: 'Shrikhand';
+  font-family: 'Shrikhand', sans-serif;
 }
 
 .overlay p {
   margin: 0;
   font-size: 1.2em;
+  font-weight: bold;
 }
 
 .fa-heart {
@@ -197,7 +222,7 @@ main article img {
 footer {
   background: #4C4B4D;
   color: white;
-  height: 200px;
+  height: 220px;
   width: auto;
   padding-left: 7%;
   font-size: 1.2em;
@@ -211,8 +236,17 @@ footer h4 {
   font-weight: bold;
 }
 
+footer i {
+  margin-right: 7px;
+  font-size: small;
+}
+
 footer a {
   padding-left: 2px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
 }
 
 .help {
@@ -221,5 +255,41 @@ footer a {
 
 #contact {
   line-height: 28px;
+}
+
+/* Responsive for Tablet */
+@media only screen and (min-width: 1000px) {
+  body {
+    width: 900px;
+    margin: auto;
+  }
+}
+
+/* Responsive for Desktop */
+@media only screen and (min-width: 1000px) {
+  body {
+    width: 900px;
+    margin: auto;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    height: auto;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  main article {
+    width: 49%;
+  }
+  main article span {
+    left: 74%;
+  }
 }
 /*# sourceMappingURL=style.css.map */

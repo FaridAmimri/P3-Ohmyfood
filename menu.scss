@@ -1,4 +1,4 @@
-
+@import "./scss/media";
 @import "./scss/variable";
 @import "./scss/mixins";
 
@@ -24,7 +24,7 @@ header a {
 
 main {
     width: auto;
-    height: 1300px;
+    height: 1400px;
 }
 main img {
     width: 100%;
@@ -80,4 +80,16 @@ footer a {
   
 #contact {
     @include footercontact
+}
+
+/* Responsive for Desktop */
+  
+@media #{$large-up} {
+    body {
+        width: 900px;
+        margin: auto;
+    }
+    #card {
+        width: 900px;
+    }
 }
