@@ -16,43 +16,40 @@
 
 @mixin arrow {
     position: absolute;
-    top: 2%;
-    left: 6%;
+    top: 22px;
+    left: 15px;
 }
 
 @mixin header {
+    position: relative;
     text-align: center;
     @include logo;
 }
 
 /* mixins des styles */
 
+@mixin color {
+    background: rgb(161,34,195);
+    background: linear-gradient(0deg, rgba(161,34,195,0.9500175070028011) 29%, rgba(213,33,218,1) 100%);
+}
+
 @mixin shadow {
     -webkit-box-shadow: 3px 6px 9px 0px rgba(0,0,0,0.13); 
     box-shadow: 3px 6px 9px 0px rgba(0,0,0,0.13);
 }
 
-@mixin explore {
-    margin: 20px;
-    border-radius: 30px;
-    padding: 15px;
-    border-style: none;
-    background: #D776EE;
-    color: white;
-    font-size: 1em;
-    @include shadow
-}
+/* mixins des boutons */
 
 @mixin order {
-    width: 45%;
+    width: 210px;
     margin: 20px;
     border-radius: 30px;
     padding: 15px;
     border-style: none;
-    background: #C76FDB;
     color: white;
     font-size: 1em;
-    @include shadow
+    @include color;
+    @include shadow;
 }
 
 @mixin new {

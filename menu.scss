@@ -25,59 +25,73 @@ header a {
 main {
     width: auto;
     height: 1400px;
-}
-main img {
-    width: 100%;
-    height: 250px;
+
+    img {
+        width: 100%;
+        height: 250px;
+    }
+
+    h2 {
+        @include h2
+    }
+
+    h3 {
+        @include h3
+    }
+
+    h4 {
+        @include h4
+    }
+
+    p {
+        display: flex;
+        justify-content: space-between;
+        margin: 0;
+    }
+
+    button {
+        @include order;
+    
+        &:hover {
+            background: darken($include color, 50);
+        }
+    }
 }
 #card {
     @include card
 }
 .menu {
     margin-bottom: 35px;
-  }  
-main h2 {
-    @include h2
-}
-main h3 {
-    @include h3
-}
-main h4 {
-    @include h4
-}
+  }   
 .food {
     @include food
 }
-p {
-    display: flex;
-    justify-content: space-between;
-    margin: 0;
-}
+
 #order {
     text-align: center;
-}
-button {
-    @include order
 }
 
 /* Footer */
 
 footer {
-    @include footer
-}
-  
-footer h4 {
-    @include footerh4
-}
-  
-footer a {
-    @include footera
-}
-  
+    @include footer;
+
+    h4 {
+        @include footerh4
+    }
+
+    i {
+        margin-right: 7px;
+        font-size: small;
+    }
+
+    a {
+        @include footera
+    }
+} 
 .help {
     @include footerhelp
 }
-  
 #contact {
     @include footercontact
 }

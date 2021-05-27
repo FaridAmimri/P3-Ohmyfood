@@ -33,7 +33,12 @@ header {
     }
 
     button {
-        @include explore;
+        @include order;
+        transition: color .5s;
+
+        &:hover {
+            opacity: 1;
+        }
     }
 }
 #logo {
@@ -51,7 +56,7 @@ header {
         font-weight: bold;
         padding-left: 10px;
         text-align: center;
-        width: 50%;
+        width: 145px;
     }
 }
 #restaurants {
@@ -84,7 +89,7 @@ form {
         justify-content: space-around;
         font-size: 1em;
         position: relative;
-        @include shadow
+        @include shadow;
     }
     i {
         position: absolute;

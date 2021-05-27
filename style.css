@@ -4,6 +4,7 @@
 /* mixins générales des polices */
 /* mixins du Header */
 /* mixins des styles */
+/* mixins des boutons */
 /* mixins des titres */
 /* mixins générales */
 /* mixins du Footer */
@@ -21,6 +22,7 @@ h2 {
 
 /* Header */
 header {
+  position: relative;
   text-align: center;
   padding: 15px 0;
 }
@@ -38,15 +40,25 @@ header p {
 }
 
 header button {
+  width: 210px;
   margin: 20px;
   border-radius: 30px;
   padding: 15px;
   border-style: none;
-  background: #D776EE;
   color: white;
   font-size: 1em;
+  background: #a122c3;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(29%, rgba(161, 34, 195, 0.950018)), to(#d521da));
+  background: linear-gradient(0deg, rgba(161, 34, 195, 0.950018) 29%, #d521da 100%);
   -webkit-box-shadow: 3px 6px 9px 0px rgba(0, 0, 0, 0.13);
   box-shadow: 3px 6px 9px 0px rgba(0, 0, 0, 0.13);
+  opacity: .8;
+  -webkit-transition: color .5s;
+  transition: color .5s;
+}
+
+header button:hover {
+  opacity: 1;
 }
 
 #logo {
@@ -66,7 +78,7 @@ header button {
   font-weight: bold;
   padding-left: 10px;
   text-align: center;
-  width: 50%;
+  width: 145px;
 }
 
 #restaurants {
