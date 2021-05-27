@@ -48,6 +48,7 @@
     border-style: none;
     color: white;
     font-size: 1em;
+    opacity: 0.7;
     @include color;
     @include shadow;
 }
