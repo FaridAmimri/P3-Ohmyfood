@@ -12,7 +12,6 @@
     top: 0;
     left: 0;
     z-index: 999;
-    display: none;
 }
 /* Création du loader */ 
 .loader {
@@ -28,7 +27,6 @@
     top: 50%;
     left: 50%;
     animation: spin 1.5s linear infinite;
-    
 }
 /* Animation du loader */
 @keyframes spin {
@@ -41,13 +39,17 @@
 }
 /* Mettre fin à l'animation du loader */
 .shutdown {
-    animation: shutdown 0s ease-in 1.5s forwards;
+    animation: shutdown 0s linear 4s forwards;
 }
 @keyframes shutdown {
-    to {
-        width: 0;
-        height: 0;
-        overflow: hidden;
+    0% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
     }
 }
 

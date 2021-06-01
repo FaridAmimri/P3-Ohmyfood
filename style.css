@@ -17,7 +17,6 @@
   top: 0;
   left: 0;
   z-index: 999;
-
 }
 
 /* Création du loader */
@@ -62,23 +61,31 @@
 
 /* Mettre fin à l'animation du loader */
 .shutdown {
-  -webkit-animation: shutdown 0s ease-in 1.5s forwards;
-          animation: shutdown 0s ease-in 1.5s forwards;
+  -webkit-animation: shutdown 0s linear 4s forwards;
+          animation: shutdown 0s linear 4s forwards;
 }
 
 @-webkit-keyframes shutdown {
-  to {
-    width: 0;
-    height: 0;
-    overflow: hidden;
+  0% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }
 
 @keyframes shutdown {
-  to {
-    width: 0;
-    height: 0;
-    overflow: hidden;
+  0% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }
 
