@@ -16,7 +16,8 @@ body {
 }
 
 .fa-heart {
-  color: #FFF;
+  color: transparent;
+  -webkit-text-stroke: 2px black;
 }
 
 .fa-heart::before {
@@ -27,7 +28,7 @@ body {
 }
 
 .fa-heart:hover::before {
-  color: #FF79DA;
+  color: pink;
   cursor: pointer;
 }
 
@@ -103,7 +104,7 @@ main button {
   border-style: none;
   color: white;
   font-size: 1em;
-  opacity: 0.7;
+  opacity: 1;
   background: #a122c3;
   background: -webkit-gradient(linear, left bottom, left top, color-stop(29%, rgba(161, 34, 195, 0.950018)), to(#d521da));
   background: linear-gradient(0deg, rgba(161, 34, 195, 0.950018) 29%, #d521da 100%);
@@ -114,7 +115,7 @@ main button {
 }
 
 main button:hover {
-  opacity: 1;
+  opacity: 0.7;
 }
 
 #card {
@@ -190,6 +191,48 @@ footer a {
   }
   #card {
     width: 900px;
+  }
+}
+
+/* Animations Menu - Apparition progressive */
+.menu:nth-of-type(1) {
+  -webkit-animation: menu 1s both 0s;
+          animation: menu 1s both 0s;
+}
+
+.menu:nth-of-type(2) {
+  -webkit-animation: menu 1s both 2s;
+          animation: menu 1s both 2s;
+}
+
+.menu:nth-of-type(3) {
+  -webkit-animation: menu 1s both 4s;
+          animation: menu 1s both 4s;
+}
+
+@-webkit-keyframes menu {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(15px);
+            transform: translateY(15px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes menu {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(15px);
+            transform: translateY(15px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
   }
 }
 /*# sourceMappingURL=menu.css.map */

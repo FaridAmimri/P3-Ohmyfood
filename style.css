@@ -8,7 +8,7 @@
 /* mixins des titres */
 /* mixins générales */
 /* mixins du Footer */
-/* Eléments parent du loader */
+/* Elément parent du loader */
 .loader-container {
   background-color: white;
   position: fixed;
@@ -16,7 +16,6 @@
   height: 100%;
   top: 0;
   left: 0;
-  z-index: 999;
 }
 
 /* Création du loader */
@@ -61,31 +60,43 @@
 
 /* Mettre fin à l'animation du loader */
 .shutdown {
-  -webkit-animation: shutdown 0s linear 4s forwards;
-          animation: shutdown 0s linear 4s forwards;
+  -webkit-animation: shutdown 3s linear 1s both;
+          animation: shutdown 3s linear 1s both;
 }
 
 @-webkit-keyframes shutdown {
   0% {
     opacity: 1;
+    z-index: 999;
   }
   90% {
     opacity: 1;
   }
+  99% {
+    opacity: 0;
+  }
   100% {
     opacity: 0;
+    z-index: 0;
+    display: none;
   }
 }
 
 @keyframes shutdown {
   0% {
     opacity: 1;
+    z-index: 999;
   }
   90% {
     opacity: 1;
   }
+  99% {
+    opacity: 0;
+  }
   100% {
     opacity: 0;
+    z-index: 0;
+    display: none;
   }
 }
 
@@ -128,7 +139,7 @@ header button {
   border-style: none;
   color: white;
   font-size: 1em;
-  opacity: 0.7;
+  opacity: 1;
   background: #a122c3;
   background: -webkit-gradient(linear, left bottom, left top, color-stop(29%, rgba(161, 34, 195, 0.950018)), to(#d521da));
   background: linear-gradient(0deg, rgba(161, 34, 195, 0.950018) 29%, #d521da 100%);
@@ -139,7 +150,7 @@ header button {
 }
 
 header button:hover {
-  opacity: 1;
+  opacity: 0.7;
 }
 
 #logo {
