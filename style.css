@@ -32,8 +32,8 @@
   /* Placement du loader au milieu de la page */
   top: 50%;
   left: 50%;
-  -webkit-animation: spin 1.5s linear infinite;
-          animation: spin 1.5s linear infinite;
+  -webkit-animation: spin 1s linear infinite;
+          animation: spin 1s linear infinite;
 }
 
 /* Animation du loader */
@@ -60,14 +60,20 @@
 
 /* Mettre fin à l'animation du loader */
 .shutdown {
-  -webkit-animation: shutdown 3s linear 1s both;
-          animation: shutdown 3s linear 1s both;
+  -webkit-animation: shutdown 3s linear 3s both;
+          animation: shutdown 3s linear 3s both;
 }
 
 @-webkit-keyframes shutdown {
   0% {
     opacity: 1;
     z-index: 999;
+  }
+  70% {
+    opacity: 0.5;
+  }
+  80% {
+    opacity: 0.7;
   }
   90% {
     opacity: 1;
@@ -86,6 +92,12 @@
   0% {
     opacity: 1;
     z-index: 999;
+  }
+  70% {
+    opacity: 0.5;
+  }
+  80% {
+    opacity: 0.7;
   }
   90% {
     opacity: 1;
@@ -326,10 +338,11 @@ main article span {
 footer {
   background: #4C4B4D;
   color: white;
-  height: 220px;
+  height: 210px;
   width: auto;
   padding-left: 7%;
   font-size: 1.2em;
+  margin-top: 30px;
 }
 
 footer h4 {
