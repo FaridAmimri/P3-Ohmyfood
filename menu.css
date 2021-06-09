@@ -28,7 +28,7 @@ body {
 }
 
 .fa-heart:hover::before {
-  color: #b056c9;
+  color: #dd0deb;
   cursor: pointer;
 }
 
@@ -54,6 +54,8 @@ main {
 main img {
   width: 100%;
   height: 250px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 main h2 {
@@ -154,6 +156,9 @@ main button:hover {
   height: 100%;
   margin-bottom: 20px;
   padding: 10px 15px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .box {
