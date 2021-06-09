@@ -151,18 +151,19 @@ header button {
   border-style: none;
   color: white;
   font-size: 1em;
-  opacity: 1;
   background: #a122c3;
-  background: -webkit-gradient(linear, left bottom, left top, color-stop(29%, rgba(161, 34, 195, 0.950018)), to(#d521da));
-  background: linear-gradient(0deg, rgba(161, 34, 195, 0.950018) 29%, #d521da 100%);
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(161, 34, 195, 0.950018)), to(#db92dd));
+  background: linear-gradient(0deg, rgba(161, 34, 195, 0.950018) 0%, #db92dd 100%);
   -webkit-box-shadow: 3px 6px 9px 0px rgba(0, 0, 0, 0.13);
   box-shadow: 3px 6px 9px 0px rgba(0, 0, 0, 0.13);
-  -webkit-transition: color .5s;
-  transition: color .5s;
+  -webkit-transition: color 1s;
+  transition: color 1s;
 }
 
 header button:hover {
-  opacity: 0.7;
+  background: #dd0deb;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(48%, #dd0deb), to(#db92dd));
+  background: linear-gradient(0deg, #dd0deb 48%, #db92dd 100%);
 }
 
 #logo {
@@ -342,15 +343,18 @@ footer {
   width: auto;
   padding-left: 7%;
   font-size: 1.2em;
-  margin-top: 30px;
 }
 
 footer h4 {
   margin: 0;
-  font-style: italic;
-  font-family: roboto;
   padding: 19px 0;
-  font-weight: bold;
+  -webkit-filter: invert(1);
+          filter: invert(1);
+}
+
+footer img {
+  width: 100px;
+  margin-top: 10px;
 }
 
 footer i {

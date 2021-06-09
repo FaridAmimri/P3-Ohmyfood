@@ -18,7 +18,7 @@ body {
     &::before {
         content: "\f004";
         font-weight: bold;
-        transition: color 3s ease-out;
+        transition: color 1s ease-out;
       }
 
     &:hover::before {
@@ -40,7 +40,7 @@ header a {
 
 main {
     width: auto;
-    height: 1400px;
+    height: 1430px;
 
     img {
         width: 100%;
@@ -56,21 +56,28 @@ main {
     }
 
     h4 {
-        @include h4
+        @include h4;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
 
     p {
         display: flex;
         justify-content: space-between;
         margin: 0;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
 
     button {
         @include order;
-        transition: color .5s;
+        transition: color 1s;
 
         &:hover {
-            opacity: 0.7;
+            background: rgb(221,13,235);
+            background: linear-gradient(0deg, rgba(221,13,235,1) 48%, rgba(219,146,221,1) 100%);
         }
     }
 }
@@ -99,16 +106,18 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-    display: none;
     background-color: $tertiarycolor;
     width: 0;
     height: 65px;
     border-radius: 0 15px 15px 0;
+    transition: all 0.5s;
+    visibility: hidden;
 }
 i.far.fa-check-circle {
     background-color: $tertiarycolor;
     font-weight: bold;
     color: white;
+    font-size: 1.5em;
 }   
 .selection {
     display: flex;
@@ -120,13 +129,15 @@ i.far.fa-check-circle {
 
     &:hover {
         .food {
-            width: 80%;
             border-radius: 15px 0 0 15px;
         }
         .box {
-            display: flex;
-
             width: 20%;
+            visibility: visible;
+        }
+        i.far.fa-check-circle {
+            transition: all 0.5s;
+            transform: rotate(360deg);
         }
     }
 }
@@ -141,7 +152,7 @@ i.far.fa-check-circle {
     position: absolute;
     display: flex;
     justify-content: center;
-    top: 1130px;
+    top: 1140px;
     width: 100%;
 }
 
@@ -152,6 +163,11 @@ footer {
 
     h4 {
         @include footerh4
+    }
+
+    img {
+        width: 100px;
+        margin-top: 10px;
     }
 
     i {

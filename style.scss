@@ -94,10 +94,11 @@ header {
 
     button {
         @include order;
-        transition: color .5s;
+        transition: color 1s;
 
         &:hover {
-            opacity: 0.7;
+            background: rgb(221,13,235);
+            background: linear-gradient(0deg, rgba(221,13,235,1) 48%, rgba(219,146,221,1) 100%);
         }
     }
 }
@@ -243,6 +244,11 @@ footer {
 
     h4 {
         @include footerh4
+    }
+
+    img {
+        width: 100px;
+        margin-top: 10px;
     }
 
     i {

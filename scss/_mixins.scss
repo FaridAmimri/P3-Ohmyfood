@@ -28,11 +28,6 @@
 
 /* mixins des styles */
 
-@mixin color {
-    background: rgb(161,34,195);
-    background: linear-gradient(0deg, rgba(161,34,195,0.9500175070028011) 29%, rgba(213,33,218,1) 100%);
-}
-
 @mixin shadow {
     -webkit-box-shadow: 3px 6px 9px 0px rgba(0,0,0,0.13); 
     box-shadow: 3px 6px 9px 0px rgba(0,0,0,0.13);
@@ -48,8 +43,8 @@
     border-style: none;
     color: white;
     font-size: 1em;
-    opacity: 1;
-    @include color;
+    background: rgb(161,34,195);
+    background: linear-gradient(0deg, rgba(161,34,195,0.9500175070028011) 0%, rgba(219,146,221,1) 100%);
     @include shadow;
 }
 
@@ -120,15 +115,12 @@
     width: auto;
     padding-left: 7%;
     font-size: 1.2em;
-    margin-top: 30px;
 }
 
 @mixin footerh4 {
     margin: 0;
-    font-style: italic;
-    font-family: roboto;
     padding: 19px 0;
-    font-weight: bold;
+    filter: invert(1);
 }
 
 @mixin footera {
