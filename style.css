@@ -60,8 +60,8 @@
 
 /* Mettre fin à l'animation du loader */
 .shutdown {
-  -webkit-animation: shutdown 3s linear 3s both;
-          animation: shutdown 3s linear 3s both;
+  -webkit-animation: shutdown 2s linear 1s both;
+          animation: shutdown 2s linear 1s both;
 }
 
 @-webkit-keyframes shutdown {
@@ -198,7 +198,7 @@ header button:hover {
 
 /* Form */
 form {
-  width: 85%;
+  width: 90%;
   height: 300px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -274,6 +274,9 @@ main article {
   margin-bottom: 20px;
   width: 100%;
   height: 260px;
+  border-radius: 15px;
+  -webkit-box-shadow: 0px 7px 6px 1px rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 7px 6px 1px rgba(0, 0, 0, 0.12);
 }
 
 main article img {
@@ -289,9 +292,9 @@ main article span {
   background-color: #89E9C5;
   color: #0E8055;
   font-weight: bold;
-  left: 70%;
+  right: 10px;
   top: 5%;
-  padding: 5px 12px;
+  padding: 1% 4%;
   border-radius: 3px;
 }
 
@@ -328,7 +331,6 @@ main article span {
 .overlay p {
   margin: 0;
   font-size: 1.2em;
-  font-weight: bold;
 }
 
 .fa-heart {
@@ -337,7 +339,7 @@ main article span {
 
 /* Footer */
 footer {
-  background: #4C4B4D;
+  background: #37353a;
   color: white;
   height: 210px;
   width: auto;

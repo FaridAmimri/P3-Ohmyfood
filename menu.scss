@@ -68,6 +68,7 @@ main {
         display: flex;
         justify-content: space-between;
         margin: 0;
+        color: #4c4b4d;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
@@ -117,6 +118,7 @@ main {
     border-radius: 0 15px 15px 0;
     transition: all 0.5s;
     visibility: hidden;
+    overflow: hidden;
 }
 i.far.fa-check-circle {
     background-color: $tertiarycolor;
@@ -214,10 +216,10 @@ footer {
     animation: menu 1s both 0s;
 }
 .menu:nth-of-type(2){
-    animation: menu 1s both 2s;
+    animation: menu 1s both 1s;
 }
 .menu:nth-of-type(3){
-    animation: menu 1s both 4s;
+    animation: menu 1s both 2s;
 }
 
 @keyframes menu {

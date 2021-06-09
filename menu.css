@@ -76,7 +76,7 @@ main h3 {
   text-transform: uppercase;
   margin-left: 4%;
   color: grey;
-  width: 12%;
+  width: 45px;
   font-size: 1.1rem;
   border-bottom: 3px solid #99E2D0;
   margin-bottom: 15px;
@@ -100,6 +100,7 @@ main p {
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin: 0;
+  color: #4c4b4d;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -179,6 +180,7 @@ main button:hover {
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
   visibility: hidden;
+  overflow: hidden;
 }
 
 i.far.fa-check-circle {
@@ -241,7 +243,7 @@ i.far.fa-check-circle {
 
 /* Footer */
 footer {
-  background: #4C4B4D;
+  background: #37353a;
   color: white;
   height: 210px;
   width: auto;
@@ -302,13 +304,13 @@ footer a {
 }
 
 .menu:nth-of-type(2) {
-  -webkit-animation: menu 1s both 2s;
-          animation: menu 1s both 2s;
+  -webkit-animation: menu 1s both 1s;
+          animation: menu 1s both 1s;
 }
 
 .menu:nth-of-type(3) {
-  -webkit-animation: menu 1s both 4s;
-          animation: menu 1s both 4s;
+  -webkit-animation: menu 1s both 2s;
+          animation: menu 1s both 2s;
 }
 
 @-webkit-keyframes menu {
