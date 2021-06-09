@@ -33,7 +33,8 @@ header {
     @include header
 }
 header a {
-    @include arrow
+    @include arrow;
+    color: black;
 }
 
 /* Main */
