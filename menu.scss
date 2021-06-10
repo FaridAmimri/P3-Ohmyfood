@@ -169,7 +169,7 @@ footer {
     @include footer;
 
     h4 {
-        @include footerh4
+        @include footerh4;
     }
 
     img {
@@ -183,16 +183,15 @@ footer {
     }
 
     a {
-        @include footera
+        @include footera;
     }
 } 
 .help {
-    @include footerhelp
+    @include footerhelp;
 }
 #contact {
-    @include footercontact
+    @include footercontact;
 }
-
 
    /* MEDIA QUERIES */
 

@@ -378,6 +378,7 @@ footer a {
 
 #contact {
   line-height: 28px;
+  position: absolute;
 }
 
 /* Responsive for Tablet */
