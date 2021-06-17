@@ -2,235 +2,240 @@
 @import "./scss/variable";
 @import "./scss/mixins";
 
-
 /* éléments généraux de la page */
 
 body {
-    width: 100%;
-    margin: 0;
-    @include policetext;
+  width: 100%;
+  margin: 0;
+  @include policetext;
 }
 
 .fa-heart {
-    color: transparent;
-    -webkit-text-stroke: 2px black;
+  color: transparent;
+  -webkit-text-stroke: 2px black;
 
-    &::before {
-        content: "\f004";
-        font-weight: bold;
-        transition: color 1s ease-out;
-      }
+  &::before {
+    content: "\f004";
+    font-weight: bold;
+    transition: color 1s ease-out;
+  }
 
-    &:hover::before {
-        color: rgb(221,13,235);
-        cursor: pointer;
-      }
+  &:hover::before {
+    color: rgb(221, 13, 235);
+    cursor: pointer;
+  }
 }
 
 /* Header */
 
 header {
-    @include header
+  @include header;
 }
 header a {
-    @include arrow;
-    color: black;
+  @include arrow;
+  color: black;
 }
 
 /* Main */
 
 main {
-    width: auto;
-    height: 1430px;
+  width: auto;
+  height: 1430px;
 
-    img {
-        width: 100%;
-        height: 250px;
-        object-fit: cover;
-    }
-
-    h2 {
-        @include h2
-    }
-
-    h3 {
-        @include h3
-    }
-
-    h4 {
-        @include h4;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
-
-    p {
-        display: flex;
-        justify-content: space-between;
-        margin: 0;
-        color: #4c4b4d;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
-
-    button {
-        @include order;
-        transition: color 1s;
-
-        &:hover {
-            background: rgb(221,13,235);
-            background: linear-gradient(0deg, rgba(221,13,235,1) 48%, rgba(219,146,221,1) 100%);
-        }
-    }
-}
-#card {
-    @include card;
-
-}
-
-    /* Hover - Selection d'un plat */
-
-.menu {
-    margin-bottom: 35px;
-}
-.food {
-    display: flex;
-    flex-direction: column;
-    background: white;
-    margin: auto;
-    border-radius: 15px;
+  img {
     width: 100%;
-    height: 100%;
-    margin-bottom: 20px;
-    padding: 10px 15px;
+    height: 250px;
+    object-fit: cover;
+  }
+
+  h2 {
+    @include h2;
+  }
+
+  h3 {
+    @include h3;
+  }
+
+  h4 {
+    @include h4;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-}
-.box {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: $tertiarycolor;
-    width: 0;
-    height: 65px;
-    border-radius: 0 15px 15px 0;
-    transition: all 0.5s;
-    visibility: hidden;
+  }
+
+  p {
+    //display: flex;
+    justify-content: space-between;
+    margin: 0;
+    color: #4c4b4d;
+    white-space: nowrap;
     overflow: hidden;
-}
-i.far.fa-check-circle {
-    background-color: $tertiarycolor;
-    font-weight: bold;
-    color: white;
-    font-size: 1.5em;
-}   
-.selection {
-    display: flex;
-    margin: auto;
-    width: 93%;
-    height: auto;
-    cursor: pointer;
-    position: relative;
+    text-overflow: ellipsis;
+  }
+
+  button {
+    @include order;
+    transition: color 1s;
 
     &:hover {
-        .food {
-            border-radius: 15px 0 0 15px;
-        }
-        .box {
-            width: 20%;
-            visibility: visible;
-        }
-        i.far.fa-check-circle {
-            transition: all 0.5s;
-            transform: rotate(360deg);
-        }
+      background: rgb(221, 13, 235);
+      background: linear-gradient(
+        0deg,
+        rgba(221, 13, 235, 1) 48%,
+        rgba(219, 146, 221, 1) 100%
+      );
     }
+  }
+}
+#card {
+  @include card;
+}
+
+/* Hover - Selection d'un plat */
+
+.menu {
+  margin-bottom: 35px;
+}
+.food {
+  //display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  padding: 10px 15px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $tertiarycolor;
+  width: 0;
+  height: 65px;
+  transition: all 0.5s;
+  visibility: hidden;
+  overflow: hidden;
+}
+i.far.fa-check-circle {
+  background-color: $tertiarycolor;
+  font-weight: bold;
+  color: white;
+  font-size: 1.5em;
+}
+.selection {
+  background: white;
+  border-radius: 15px;
+  display: flex;
+  margin: auto;
+  margin-bottom: 20px;
+  width: 93%;
+  height: 65px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+
+  &:hover {
+    .food {
+      border-radius: 15px 0 0 15px;
+    }
+    .box {
+      width: 20%;
+      visibility: visible;
+    }
+    i.far.fa-check-circle {
+      transition: all 0.5s;
+      transform: rotate(360deg);
+    }
+  }
 }
 #order {
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    top: 1110px;
-    width: 100%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  top: 1110px;
+  width: 100%;
 }
 #order2 {
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    top: 1140px;
-    width: 100%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  top: 1140px;
+  width: 100%;
 }
 
 /* Footer */
 
 footer {
-    @include footer;
+  @include footer;
 
-    h4 {
-        @include footerh4;
-    }
+  h4 {
+    @include footerh4;
+  }
 
-    img {
-        width: 100px;
-        margin-top: 10px;
-    }
+  img {
+    width: 100px;
+    margin-top: 10px;
+  }
 
-    i {
-        margin-right: 7px;
-        font-size: small;
-    }
+  i {
+    margin-right: 7px;
+    font-size: small;
+  }
 
-    a {
-        @include footera;
-    }
-} 
+  a {
+    @include footera;
+  }
+}
 .help {
-    @include footerhelp;
+  @include footerhelp;
 }
 #contact {
-    @include footercontact;
+  @include footercontact;
 }
 
-   /* MEDIA QUERIES */
+/* MEDIA QUERIES */
 
 /* Responsive for Desktop */
-  
+
 @media #{$large-up} {
-    body {
-        width: 900px;
-        margin: auto;
-    }
-    #card {
-        width: 900px;
-    }
+  body {
+    width: 900px;
+    margin: auto;
+  }
+  #card {
+    width: 900px;
+  }
 }
 
-    /* ANIMATION */
+/* ANIMATION */
 
 /* Animation Menu - Apparition progressive par groupe */
 
-.menu:nth-of-type(1){
-    animation: menu 1s both 0s;
+.menu:nth-of-type(1) {
+  animation: menu 1s both 0s;
 }
-.menu:nth-of-type(2){
-    animation: menu 1s both 1s;
+.menu:nth-of-type(2) {
+  animation: menu 1s both 1s;
 }
-.menu:nth-of-type(3){
-    animation: menu 1s both 2s;
+.menu:nth-of-type(3) {
+  animation: menu 1s both 2s;
 }
 
 @keyframes menu {
-    0% {
-        opacity: 0;
-        transform: translateY(15px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
+  0% {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Animation selection d'un plat */
-
+.bold-price {
+  background-color: white;
+  margin-right: 20px;
+  margin-top: 35px;
+}

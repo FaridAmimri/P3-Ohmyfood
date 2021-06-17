@@ -2,305 +2,307 @@
 @import "./scss/variable";
 @import "./scss/mixins";
 
-
 /* Elément parent du loader */
 .loader-container {
-    background-color: white;
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
+  background-color: white;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
 }
-/* Création du loader */ 
+/* Création du loader */
 .loader {
-    width: 120px;
-    height: 120px;
-    border: 16px solid $backgroundsecondary;
-    border-radius: 50%;
-    border-top: 16px solid $secondarycolor;
-    border-bottom: 16px solid $primarycolor;
-    box-shadow: 0 0 6px 2px rgba(0,0,0,0.2);
-    position: absolute;
-    /* Placement du loader au milieu de la page */ 
-    top: 50%;
-    left: 50%;
-    animation: spin 1s linear infinite;
+  width: 120px;
+  height: 120px;
+  border: 16px solid $backgroundsecondary;
+  border-radius: 50%;
+  border-top: 16px solid $secondarycolor;
+  border-bottom: 16px solid $primarycolor;
+  box-shadow: 0 0 6px 2px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  /* Placement du loader au milieu de la page */
+  top: 50%;
+  left: 50%;
+  animation: spin 1s linear infinite;
 }
 /* Animation du loader */
 @keyframes spin {
-    0% {
-        transform: translate(-50%, -50%) rotate(0deg);
-    }
-    100% {
-        transform: translate(-50%, -50%) rotate(360deg);
-    }
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
 }
 /* Mettre fin à l'animation du loader */
 .shutdown {
-    animation: shutdown 2s linear 1s both;
+  animation: shutdown 2s linear 1s both;
 }
 @keyframes shutdown {
-    0% {
-        opacity: 1;
-        z-index: 999;
-    }
-    70% {
-        opacity: 0.5;
-    }
-    80% {
-        opacity: 0.7;
-    }
-    90% {
-        opacity: 1;
-    }
-    99% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 0;
-        z-index: 0;
-        display: none;
-    }
+  0% {
+    opacity: 1;
+    z-index: 999;
+  }
+  70% {
+    opacity: 0.5;
+  }
+  80% {
+    opacity: 0.7;
+  }
+  90% {
+    opacity: 1;
+  }
+  99% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+    z-index: 0;
+    display: none;
+  }
 }
 
 /* éléments généraux de la page */
 body {
-    width: auto;
-    margin: 0;
-    @include policetext
+  width: auto;
+  margin: 0;
+  @include policetext;
 }
 h2 {
-    width: 80%;
-    @include policetitle;
+  width: 80%;
+  @include policetitle;
 }
 
 /* Header */
 
 header {
-    @include header;
+  @include header;
 
-    h1 {
-        width: 80%;
-        margin: auto;
-        font-family: 'Shrikhand', sans-serif;
-        font-size: 1.5rem;
+  h1 {
+    width: 80%;
+    margin: auto;
+    font-family: "Shrikhand", sans-serif;
+    font-size: 1.5rem;
+  }
+
+  p {
+    font-size: 1.1em;
+    margin: 10px 0;
+  }
+
+  button {
+    @include order;
+    transition: color 1s;
+
+    &:hover {
+      background: rgb(221, 13, 235);
+      background: linear-gradient(
+        0deg,
+        rgba(221, 13, 235, 1) 48%,
+        rgba(219, 146, 221, 1) 100%
+      );
     }
-
-    p {
-        font-size: 1.1em;
-        margin: 10px 0;
-    }
-
-    button {
-        @include order;
-        transition: color 1s;
-
-        &:hover {
-            background: rgb(221,13,235);
-            background: linear-gradient(0deg, rgba(221,13,235,1) 48%, rgba(219,146,221,1) 100%);
-        }
-    }
+  }
 }
 #logo {
-    @include logo
+  @include logo;
 }
 #localisation {
-    font-size: 1em;
-    background: $backgroundsecondary;
-    padding: 10px 40px;
+  font-size: 1em;
+  background: $backgroundsecondary;
+  padding: 10px 40px;
 
-    input {
-        background: transparent;
-        border-style: none;
-        font-size: 1.1em;
-        font-weight: bold;
-        padding-left: 10px;
-        text-align: center;
-        width: 145px;
-    }
+  input {
+    background: transparent;
+    border-style: none;
+    font-size: 1.1em;
+    font-weight: bold;
+    padding-left: 10px;
+    text-align: center;
+    width: 145px;
+  }
 }
 #restaurants {
-    background: $backgroundprimary;
-    padding: 30px;
-    @include policetitle
+  background: $backgroundprimary;
+  padding: 30px;
+  @include policetitle;
 }
 #btnpink {
-    background: $backgroundbtn;
+  background: $backgroundbtn;
 }
 
 /* Form */
 
 form {
-    width: 90%;
-    height: 300px;
-    display: flex;
-    flex-direction: column;
-    margin: auto;
-    padding: 15px 0 75px 0;
+  width: 90%;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  padding: 15px 0 75px 0;
 
-    button {
-        background: $backgroundprimary;
-        border-radius: 20px;
-        padding: 35px;
-        margin-bottom: 20px;
-        border-style: none;
-        align-items: baseline;
-        display: flex;
-        justify-content: space-around;
-        font-size: 1em;
-        position: relative;
-        @include shadow;
-    }
-    i {
-        position: absolute;
-        left: 40px;
-        top: 27px;
-    }
-    b {
-        position: absolute;
-        left: 85px;
-        top: 27px;
-    }
-}
-.circle { 
-    height: 20px;
-    width: 20px;
-    color: white; 
-    background-color: $primarycolor;
-    border: 1px solid $primarycolor;
-    border-radius: 50%;
+  button {
+    background: $backgroundprimary;
+    border-radius: 20px;
+    padding: 35px;
+    margin-bottom: 20px;
+    border-style: none;
+    align-items: baseline;
+    display: flex;
+    justify-content: space-around;
+    font-size: 1em;
+    position: relative;
+    @include shadow;
+  }
+  i {
     position: absolute;
-    left: -10px;
+    left: 40px;
     top: 27px;
+  }
+  b {
+    position: absolute;
+    left: 85px;
+    top: 27px;
+  }
+}
+.circle {
+  height: 20px;
+  width: 20px;
+  color: white;
+  background-color: $primarycolor;
+  border: 1px solid $primarycolor;
+  border-radius: 50%;
+  position: absolute;
+  left: -10px;
+  top: 27px;
 }
 i.fas.fa-store {
-    color: #9356DC;
+  color: #9356dc;
 }
 
 /* Main */
 
 main {
-    width: auto;
-    height: 1215px;
-    background: $backgroundprimary;
-    padding: 20px;
+  width: auto;
+  height: 1215px;
+  background: $backgroundprimary;
+  padding: 20px;
 
-    article {
-        object-fit: cover;
-        position: relative;
-        margin-bottom: 20px;
-        width: 100%;
-        height: 260px;
-        border-radius: 15px;
-        -webkit-box-shadow: 0px 7px 6px 1px rgba(0,0,0,0.12); 
-        box-shadow: 0px 7px 6px 1px rgba(0,0,0,0.12);
-    }
+  article {
+    object-fit: cover;
+    position: relative;
+    margin-bottom: 20px;
+    width: 100%;
+    height: 260px;
+    border-radius: 15px;
+    -webkit-box-shadow: 0px 7px 6px 1px rgba(0, 0, 0, 0.12);
+    box-shadow: 0px 7px 6px 1px rgba(0, 0, 0, 0.12);
+  }
 
-    article img {
-        object-fit: cover;
-        width: 100%;
-        height: 70%;
-        border-radius: 15px 15px 0 0;
-    }
+  article img {
+    object-fit: cover;
+    width: 100%;
+    height: 70%;
+    border-radius: 15px 15px 0 0;
+  }
 
-    article span {
-        @include new
-    }
+  article span {
+    @include new;
+  }
 }
 .image {
-    height: 100%;
-    width: 100%;
+  height: 100%;
+  width: 100%;
 }
 .overlay {
-    position: absolute;
-    box-sizing: border-box;
-    background: rgba(255,255,255,1);
-    color: black;
-    border-radius: 0 0 15px 15px;
-    height: 30%;
-    width: 100%;
-    bottom: 0;
-    padding: 13px;
+  position: absolute;
+  box-sizing: border-box;
+  background: rgba(255, 255, 255, 1);
+  color: black;
+  border-radius: 0 0 15px 15px;
+  height: 30%;
+  width: 100%;
+  bottom: 0;
+  padding: 13px;
 
-    h3 {
-        display: flex;
-        justify-content: space-between;
-        margin: 0;
-        font-size: 1.3em;
-        @include policetitle
-    }
-    p {
-        margin: 0;
-        font-size: 1.2em;
-    }
+  h3 {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    font-size: 1.3em;
+    @include policetitle;
+  }
+  p {
+    margin: 0;
+    font-size: 1.2em;
+  }
 }
 .fa-heart {
-    font-size: 1.3em;
+  font-size: 1.3em;
 }
 
 /* Footer */
 
 footer {
-    @include footer;
+  @include footer;
 
-    h4 {
-        @include footerh4;
-    }
+  h4 {
+    @include footerh4;
+  }
 
-    img {
-        width: 100px;
-        margin-top: 10px;
-    }
+  img {
+    width: 100px;
+    margin-top: 10px;
+  }
 
-    i {
-        margin-right: 7px;
-        font-size: small;
-    }
+  i {
+    margin-right: 7px;
+    font-size: small;
+  }
 
-    a {
-        @include footera
-    }
-} 
+  a {
+    @include footera;
+  }
+}
 .help {
-    @include footerhelp
+  @include footerhelp;
 }
 #contact {
-    @include footercontact
+  @include footercontact;
 }
 
 /* Responsive for Tablet */
-  
+
 @media #{$large-up} {
-    body {
-        width: 900px;
-        margin: auto;
-    }
+  body {
+    width: 900px;
+    margin: auto;
+  }
 }
 
 /* Responsive for Desktop */
-  
+
 @media #{$large-up} {
-    body {
-        width: 900px;
-        margin: auto;
-    }
+  body {
+    width: 900px;
+    margin: auto;
+  }
 }
 
 @media #{$medium-up} {
-    main {
-        display: flex;
-        flex-wrap: wrap;
-        height: auto;
-        justify-content: space-between;
+  main {
+    display: flex;
+    flex-wrap: wrap;
+    height: auto;
+    justify-content: space-between;
 
-        article {
-            width: 49%;
-        }
-
-        article span {
-            left: 74%;
-        }
+    article {
+      width: 49%;
     }
-}
 
+    article span {
+      left: 74%;
+    }
+  }
+}
