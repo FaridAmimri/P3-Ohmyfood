@@ -65,13 +65,22 @@ main {
     }
 
     p {
-        display: flex;
         justify-content: space-between;
         margin: 0;
         color: #4c4b4d;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
+    }
+
+    span {
+        display: flex;
+        align-items: flex-end;
+        font-weight: bold;
+        background: white;
+        height: 50px;
+        border-radius: 0 15px 15px 0;
+        padding: 8px;
     }
 
     button {
@@ -99,7 +108,7 @@ main {
     flex-direction: column;
     background: white;
     margin: auto;
-    border-radius: 15px;
+    border-radius: 15px 0 0 15px;
     width: 100%;
     height: 100%;
     margin-bottom: 20px;
@@ -135,12 +144,12 @@ i.far.fa-check-circle {
     position: relative;
 
     &:hover {
-        .food {
-            border-radius: 15px 0 0 15px;
-        }
         .box {
             width: 20%;
             visibility: visible;
+        }
+        span {
+            border-radius: 0;
         }
         i.far.fa-check-circle {
             transition: all 0.5s;

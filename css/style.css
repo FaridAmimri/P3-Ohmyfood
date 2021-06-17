@@ -335,6 +335,20 @@ main article span {
 
 .fa-heart {
   font-size: 1.3em;
+  color: transparent;
+  -webkit-text-stroke: 2px black;
+}
+
+.fa-heart::before {
+  content: "\f004";
+  font-weight: bold;
+  -webkit-transition: color 1s ease-out;
+  transition: color 1s ease-out;
+}
+
+.fa-heart:hover::before {
+  color: #dd0deb;
+  cursor: pointer;
 }
 
 /* Footer */
